@@ -1,0 +1,314 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #1488c4;
+  --second-color: #ffff;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Inter", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --white: #fff;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  background: #000;
+  color: var(--white);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== CLASS CSS ===== */
+a.buy-btn {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: capitalize;
+}
+
+header {
+  width: 100%;
+  padding-block: 15px;
+  position: absolute;
+  top: 0;
+  overflow-x: hidden;
+}
+@media (max-width: 700px) {
+  header .container .nav-ul {
+    display: none !important;
+  }
+}
+header .container .nav-ul li a {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+}
+header .container .nav-logo {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #1488c4;
+}
+header .container a.buy-btn {
+  padding: 16px 32px;
+  gap: 10px;
+  background: #1488c4;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+}
+
+section#hero {
+  min-height: 100vh;
+  width: 100%;
+  padding-block: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+section#hero .container {
+  position: relative;
+}
+section#hero .container h1.title {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 135px;
+  line-height: 128px;
+  /* or 95% */
+  background: linear-gradient(96.58deg, #006fff 22.32%, #e89330 62.48%, #db7d37 96.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@media (max-width: 700px) {
+  section#hero .container h1.title {
+    font-size: 52px;
+    line-height: 120%;
+    /* or 62px */
+  }
+}
+section#hero .container p.info {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+@media (max-width: 1200px) {
+  section#hero .container p.info {
+    position: static;
+  }
+}
+section#hero .container .btn-div {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+@media (max-width: 1200px) {
+  section#hero .container .btn-div {
+    position: static;
+  }
+}
+section#hero .container .btn-div .btn-ab {
+  width: 174px;
+  height: 42px;
+  border: 1px solid #db7b39;
+  border-radius: 2344px;
+}
+section#hero .container .btn-div .buy-btn {
+  padding: 16px 32px;
+  gap: 10px;
+  background: #006fff;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+}
+
+#about {
+  width: 100%;
+  background-color: #000;
+  padding-block: 80px;
+}
+#about h1.title {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  color: #ffffff;
+}
+#about p.info {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+#about a.buy-btn {
+  padding: 16px 32px;
+  gap: 10px;
+  background: #006fff;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+}
+
+section#features {
+  width: 100%;
+  padding-block: 80px;
+}
+section#features h1.title {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 140%;
+  color: #ffffff;
+}
+@media (max-width: 700px) {
+  section#features h1.title {
+    font-size: 40px;
+    line-height: 140%;
+  }
+}
+section#features p.info {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  margin-inline: auto;
+}
+section#features .row .cdd {
+  border: 1px solid #157cbb;
+  padding-block: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+section#features .row .cdd h2.head {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #ffffff;
+}
+section#features .row .cdd p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  width: 100%;
+  padding-block: 50px;
+}
+footer .nav-ul li a {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+footer p.copy {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
